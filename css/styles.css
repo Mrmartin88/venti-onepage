@@ -547,11 +547,8 @@ img {
 }
 
 .gallery-card h3 {
-  margin: 0;
-  color: var(--silver-bright);
-  font-size: 1.2rem;
+  margin-bottom: 12px;
 }
-
 .gallery-card p {
   margin: 0;
   color: var(--text-secondary);
@@ -579,6 +576,7 @@ img {
 }
 
 .presentacion-visual {
+  position: relative;
   float: right;
   width: 360px;
   margin-left: 2rem;
@@ -705,6 +703,14 @@ img {
   border-top: 1px solid var(--border);
 }
 
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .contacto-info {
   max-width: 520px;
 }
@@ -717,6 +723,7 @@ img {
   .hero-content,
   .presentacion-inner {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .contacto-inner {
@@ -775,8 +782,22 @@ img {
 }
 
 @media (max-width: 520px) {
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .hero-content {
+    min-height: auto;
+  }
+
   .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+    max-width: 100%;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+    max-width: 100%;
   }
 
   .hero-actions {
@@ -784,32 +805,76 @@ img {
     align-items: stretch;
   }
 
+  .hero-mockup {
+    padding: 1.5rem;
+  }
+
   .header-inner,
   .contacto-inner {
     align-items: stretch;
   }
 
+  .main-nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .main-nav a {
+    padding: 0.45rem 0;
+  }
+
   .presentacion-visual {
     position: relative;
+    width: 100%;
+  }
+
+  .presentacion-image {
+    min-height: 300px;
+    max-height: none;
+  }
+
+  .gallery-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .contact-form,
+  .contact-card {
+    padding: 1.4rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .section-header,
+  .presentacion-text,
+  .contacto-info {
+    width: 100%;
+  }
+
+  .feature-card,
+  .gallery-card {
+    min-height: auto;
   }
 }
 
-  .presentacion-visual::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-       circle,
-       rgba(37, 99, 235, 0.25) 0%,
-       transparent 70%
-     );
-      filter: blur(40px);
-      z-index: -1;
- }
+.presentacion-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.25) 0%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  z-index: -1;
+}
 
 .presentacion-image,
 .gallery-image {
-   width: 100%;
+  width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 20px;
@@ -836,7 +901,7 @@ img {
 }
 
 .gallery-card:hover .gallery-image {
-   padding: 24px;
+  transform: translateY(-2px) scale(1.01);
 }
 
 .gallery-image {
