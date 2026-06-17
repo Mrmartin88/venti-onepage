@@ -3,10 +3,12 @@
 @font-face {
   font-family: "VentiLocal";
   src: url("../fonts/venti-font.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
   font-display: swap;
 }
 
-/* Pendiente: colocar el archivo real en fonts/venti-font.woff2 */
+/* Fuente local para cumplir el requisito de @font-face del proyecto integrador. */
 
 :root {
   --bg: #050505;
