@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+@font-face {
+  font-family: "VentiLocal";
+  src: url("../fonts/venti-font.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Pendiente: colocar el archivo real en fonts/venti-font.woff2 */
+
 :root {
   --bg: #050505;
   --bg-alt: #0b0b0c;
@@ -30,7 +38,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: "VentiLocal", "Poppins", system-ui, sans-serif;
   background: radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 22%),
     radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.05), transparent 25%),
     var(--bg);
@@ -67,6 +75,7 @@ img {
 
 .logo {
   color: var(--silver-bright);
+  font-family: "VentiLocal", "Poppins", system-ui, sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
   text-decoration: none;
@@ -118,6 +127,7 @@ img {
 
 .hero-text {
   max-width: 560px;
+  animation: fadeUp 0.8s ease both;
 }
 
 .eyebrow {
@@ -131,16 +141,19 @@ img {
 .hero h1,
 .section-header h2,
 .presentacion h2,
+.demo h2,
+.faq h2,
 .contacto h2 {
   margin: 0;
   color: var(--text);
+  font-family: "VentiLocal", "Poppins", system-ui, sans-serif;
   line-height: 1.02;
 }
 
 .hero h1 {
   font-size: clamp(3rem, 4vw, 5.2rem);
   max-width: 12ch;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   background: linear-gradient(120deg, #f8fafc 0%, #c0c0c0 45%, #9ca3af 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -229,6 +242,7 @@ img {
   width: min(520px, 100%);
   padding: 2rem;
   backdrop-filter: blur(10px);
+  animation: fadeUp 0.8s ease 0.16s both;
 }
 
 .hero-mockup::before {
@@ -368,6 +382,8 @@ img {
 
 .funcionalidades,
 .galeria,
+.demo,
+.faq,
 .contacto {
   padding: 5rem 0;
 }
@@ -427,6 +443,10 @@ img {
   color: var(--accent);
   font-size: 1.3rem;
   border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.feature-icon i {
+  line-height: 1;
 }
 
 .feature-card h3 {
@@ -635,6 +655,86 @@ img {
   background: var(--bg);
 }
 
+.demo {
+  background: linear-gradient(180deg, #0b0b0c 0%, #08090b 52%, #050505 100%);
+}
+
+.demo-inner {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.demo-copy p:not(.eyebrow) {
+  color: var(--text-secondary);
+  margin: 1.2rem 0 0;
+  max-width: 560px;
+}
+
+.demo-video-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.demo-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  border-radius: 22px;
+  background: #111214;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.asset-note {
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.faq {
+  background: var(--bg-alt);
+}
+
+.faq-inner {
+  max-width: 900px;
+}
+
+.venti-accordion {
+  --bs-accordion-bg: rgba(255, 255, 255, 0.03);
+  --bs-accordion-border-color: rgba(255, 255, 255, 0.08);
+  --bs-accordion-btn-color: var(--text);
+  --bs-accordion-active-color: var(--silver-bright);
+  --bs-accordion-active-bg: rgba(37, 99, 235, 0.16);
+  --bs-accordion-btn-focus-border-color: rgba(37, 99, 235, 0.45);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
+  --bs-accordion-color: var(--text-secondary);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.venti-accordion .accordion-item {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.venti-accordion .accordion-button {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.venti-accordion .accordion-button::after {
+  filter: invert(1) grayscale(1);
+}
+
+.venti-accordion .accordion-body {
+  color: var(--text-secondary);
+}
+
 .contacto-inner {
   display: grid;
   grid-template-columns: minmax(280px, 1.1fr) 1fr;
@@ -665,6 +765,10 @@ img {
   border: 1px solid var(--border);
 }
 
+.contact-form .form-label {
+  margin-bottom: 0.35rem;
+}
+
 .contact-form label {
   font-weight: 600;
   color: var(--text);
@@ -693,6 +797,23 @@ img {
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
 }
 
+.contact-form .form-control.is-invalid,
+.was-validated .contact-form .form-control:invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12);
+}
+
+.contact-form .form-control.is-valid,
+.was-validated .contact-form .form-control:valid {
+  border-color: rgba(37, 99, 235, 0.75);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.contact-form .invalid-feedback {
+  color: #fca5a5;
+  font-size: 0.88rem;
+}
+
 .contact-form button {
   width: fit-content;
 }
@@ -719,6 +840,18 @@ img {
   color: var(--text-secondary);
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 900px) {
   .hero-content,
   .presentacion-inner {
@@ -727,6 +860,10 @@ img {
   }
 
   .contacto-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-inner {
     grid-template-columns: 1fr;
   }
 
@@ -800,6 +937,11 @@ img {
     max-width: 100%;
   }
 
+  .demo,
+  .faq {
+    padding: 3rem 0;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
@@ -839,7 +981,8 @@ img {
   }
 
   .contact-form,
-  .contact-card {
+  .contact-card,
+  .demo-video-card {
     padding: 1.4rem;
   }
 

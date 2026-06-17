@@ -1,12 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VENTI — Gestión simple para emprendedores</title>
+  <title>VENTI - Gestión simple para emprendedores</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -19,6 +21,8 @@
         <a href="#presentacion">Presentación</a>
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#galeria">Galería</a>
+        <a href="#demo">Demo</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -34,7 +38,7 @@
           <p class="hero-copy">Controlá <span class="hero-highlight">productos, stock, pedidos y ventas</span> desde una plataforma clara, rápida y pensada para negocios en crecimiento.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#funcionalidades">Ver funcionalidades</a>
-            <a class="btn btn-secondary" href="#contacto">Contactar</a>
+            <a class="btn btn-secondary" href="#demo">Ver demo</a>
           </div>
         </div>
 
@@ -83,14 +87,10 @@
         </article>
 
         <div class="presentacion-visual">
-        <img
-        src="img/presentacion.jpg"
-        alt="Espacio de trabajo moderno con tecnología"
-        class="presentacion-image"
-         />
-       </div>
+          <img src="img/presentacion.jpg" alt="Espacio de trabajo moderno con tecnología" class="presentacion-image" />
+        </div>
       </div>
-     </section>
+    </section>
 
     <!-- Sección de funcionalidades con cards flexbox -->
     <section id="funcionalidades" class="funcionalidades">
@@ -101,32 +101,32 @@
       <div class="container func-grid-wrap">
         <div class="func-grid">
           <article class="feature-card">
-            <span class="feature-icon">📦</span>
+            <span class="feature-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
             <h3>Productos</h3>
             <p>Organizá tu catálogo con descripciones claras y precios actualizados.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon">📊</span>
+            <span class="feature-icon"><i class="bi bi-boxes" aria-hidden="true"></i></span>
             <h3>Stock</h3>
             <p>Controlá entradas y salidas para evitar faltantes y sobrantes.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon">🛒</span>
+            <span class="feature-icon"><i class="bi bi-cart-check" aria-hidden="true"></i></span>
             <h3>Pedidos</h3>
             <p>Registrá pedidos y seguí el estado de cada venta con facilidad.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon">📈</span>
+            <span class="feature-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
             <h3>Dashboard</h3>
             <p>Visualizá métricas clave en un solo panel de control.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon">🚨</span>
+            <span class="feature-icon"><i class="bi bi-bell" aria-hidden="true"></i></span>
             <h3>Alertas</h3>
             <p>Recibí avisos cuando el stock baja o hay pedidos críticos.</p>
           </article>
           <article class="feature-card">
-            <span class="feature-icon">👤</span>
+            <span class="feature-icon"><i class="bi bi-person-lock" aria-hidden="true"></i></span>
             <h3>Roles de usuario</h3>
             <p>Asigná permisos y trabajá con el equipo de forma segura.</p>
           </article>
@@ -134,38 +134,111 @@
       </div>
     </section>
 
-    <!-- Sección de galería con mockups CSS -->
+    <!-- Sección de galería con imágenes -->
     <section id="galeria" class="galeria">
-    <div class="container gallery-grid-wrap">
-  <div class="gallery-grid">
-    <article class="gallery-card">
-      <img src="img/dashboard.jpg" alt="Dashboard principal de VENTI" class="gallery-image" />
-      <h3>Panel de control</h3>
-      <p>Resumen visual de ventas, ingresos y alertas.</p>
-    </article>
+      <div class="container section-header">
+        <p class="eyebrow">Galería</p>
+        <h2>Vistas clave de la plataforma</h2>
+      </div>
+      <div class="container gallery-grid-wrap">
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="img/dashboard.jpg" alt="Dashboard principal de VENTI" class="gallery-image" />
+            <h3>Panel de control</h3>
+            <p>Resumen visual de ventas, ingresos y alertas.</p>
+          </article>
 
-    <article class="gallery-card">
-      <img src="img/pedidos.jpg" alt="Gestión de pedidos en VENTI" class="gallery-image" />
-      <h3>Gestión de pedidos</h3>
-      <p>Listado claro con estados y fechas de entrega.</p>
-    </article>
+          <article class="gallery-card">
+            <img src="img/pedidos.jpg" alt="Gestión de pedidos en VENTI" class="gallery-image" />
+            <h3>Gestión de pedidos</h3>
+            <p>Listado claro con estados y fechas de entrega.</p>
+          </article>
 
-    <article class="gallery-card">
-      <img src="img/stock.jpg" alt="Control de stock en VENTI" class="gallery-image" />
-      <h3>Control de stock</h3>
-      <p>Monitoreo rápido de niveles y movimientos.</p>
-    </article>
+          <article class="gallery-card">
+            <img src="img/stock.jpg" alt="Control de stock en VENTI" class="gallery-image" />
+            <h3>Control de stock</h3>
+            <p>Monitoreo rápido de niveles y movimientos.</p>
+          </article>
 
-    <article class="gallery-card">
-      <img src="img/reportes.jpg" alt="Reportes y estadísticas de VENTI" class="gallery-image" />
-      <h3>Reportes y estadísticas</h3>
-      <p>Panel de insights con tendencias y comparativas rápidas.</p>
-    </article>
-  </div>
-</div>
+          <article class="gallery-card">
+            <img src="img/reportes.jpg" alt="Reportes y estadísticas de VENTI" class="gallery-image" />
+            <h3>Reportes y estadísticas</h3>
+            <p>Panel de insights con tendencias y comparativas rápidas.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Sección de contacto con formulario -->
+    <!-- Sección multimedia. Colocar manualmente el archivo real en video/venti-demo.mp4 -->
+    <section id="demo" class="demo">
+      <div class="container demo-inner">
+        <div class="demo-copy">
+          <p class="eyebrow">Demo multimedia</p>
+          <h2>VENTI en acción</h2>
+          <p>Un recorrido breve por el flujo de trabajo: carga de productos, control de stock, pedidos y reportes para tomar decisiones con más claridad.</p>
+        </div>
+        <div class="demo-video-card">
+          <video class="demo-video" controls preload="metadata" poster="img/dashboard.jpg">
+            <source src="video/venti-demo.mp4" type="video/mp4" />
+            Tu navegador no soporta la reproducción de video HTML5.
+          </video>
+          <p class="asset-note">Pendiente: colocar el archivo real en <strong>video/venti-demo.mp4</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Componente Bootstrap JS: accordion de preguntas frecuentes -->
+    <section id="faq" class="faq">
+      <div class="container faq-inner">
+        <div class="section-header">
+          <p class="eyebrow">FAQ</p>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+
+        <div class="accordion venti-accordion" id="ventiFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                ¿VENTI sirve para emprendimientos pequeños?
+              </button>
+            </h3>
+            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#ventiFaq">
+              <div class="accordion-body">
+                Sí. Está pensado para organizar productos, stock y pedidos sin procesos complejos.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                ¿Puedo usarlo con mi equipo?
+              </button>
+            </h3>
+            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#ventiFaq">
+              <div class="accordion-body">
+                Sí. La propuesta contempla roles de usuario para asignar permisos y trabajar con más seguridad.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                ¿Qué información muestra el dashboard?
+              </button>
+            </h3>
+            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#ventiFaq">
+              <div class="accordion-body">
+                Muestra métricas de ventas, pedidos, alertas de stock y reportes rápidos para la gestión diaria.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de contacto con formulario validado por Bootstrap -->
     <section id="contacto" class="contacto">
       <div class="container contacto-inner">
         <div class="contacto-info">
@@ -178,15 +251,30 @@
           </div>
         </div>
 
-        <form class="contact-form">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        <form class="contact-form needs-validation" novalidate>
+          <div>
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" minlength="3" required />
+            <div class="invalid-feedback">Ingresá un nombre de al menos 3 caracteres.</div>
+          </div>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="email@dominio.com" required />
+          <div>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="email@dominio.com" required />
+            <div class="invalid-feedback">Ingresá un email válido.</div>
+          </div>
 
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos sobre tu negocio" required></textarea>
+          <div>
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="1123456789" pattern="[0-9]{8,15}" required />
+            <div class="invalid-feedback">Ingresá solo números, entre 8 y 15 dígitos.</div>
+          </div>
+
+          <div>
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Contanos sobre tu negocio" minlength="10" required></textarea>
+            <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
+          </div>
 
           <button type="submit" class="btn btn-primary">Enviar consulta</button>
         </form>
@@ -196,10 +284,29 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>VENTI — Proyecto académico de desarrollo web</p>
+      <p>VENTI - Proyecto académico de desarrollo web</p>
       <p>2026</p>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (() => {
+      'use strict';
+
+      const forms = document.querySelectorAll('.needs-validation');
+
+      Array.from(forms).forEach((form) => {
+        form.addEventListener('submit', (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
 </body>
 </html>
-
